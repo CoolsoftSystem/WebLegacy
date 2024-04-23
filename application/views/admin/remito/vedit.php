@@ -79,7 +79,7 @@
                                                         <?php foreach ($producto as $atributos) : ?>
                                                             <tr>
                                                                 <td><?php echo $atributos->IdProducto; ?></td>
-                                                                <td><?php echo $atributos->producto; ?></td>
+                                                                <td style="text-align: justify; display: inline-block;"><?php echo $atributos->producto; ?></td>
                                                                 <td><?php echo $atributos->cantidad; ?></td>
                                                                 <td><?php echo $atributos->numSerie; ?></td>
                                                                 <?php $data = $atributos->IdRemito; ?>
