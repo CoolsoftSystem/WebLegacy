@@ -28,11 +28,12 @@ class Mfactura extends CI_Model{
      }
  
      //MODIFICAR factura
-     public function mupdatefact($id, $data){
- 
-         $this->db->where('N_factura', $id);
-         return $this->db->update('factura', $data);
-      }
+	public function mupdatefact($N_factura, $id_orden, $data)
+	{
+		$this->db->where('N_factura', $N_factura);
+		$this->db->where('id_orden', $id_orden);
+		return $this->db->update('factura', $data);
+	}
 
       //busca si para esa orden hay factura
   public function mbuscaordenfactura($id){
