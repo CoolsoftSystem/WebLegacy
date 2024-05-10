@@ -121,6 +121,7 @@ $(document).ready(function () {
                        "previous": "Anterior"
                    },
                },
+			  "bStateSave": true,
                scrollX:true
           });
 })
