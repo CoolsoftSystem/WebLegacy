@@ -197,8 +197,8 @@ public function cupdatefact(){
     }
     
   
-    $res=$this->mfactura->midupdatefact($nfact);
-    $fac=$this->mfactura->mbuscaordenfactura($idorden);
+    $res=$this->mfactura->midupdatefact($nfact,$idorden);
+   // $fac=$this->mfactura->mbuscaordenfactura($idorden);
     
       
           $data = array(
@@ -208,7 +208,7 @@ public function cupdatefact(){
               'estado_pago' => $estado,
               'id_orden' =>$idorden
           );
-          if($res==null && ($fac==null)){
+          if($res==null){
                 $res = $this->mfactura->minsertfactura($data);
           }else{
                 $res = $this->mfactura->mupdatefact($id ,$idorden ,$data);
