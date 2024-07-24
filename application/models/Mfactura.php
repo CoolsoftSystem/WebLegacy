@@ -21,8 +21,9 @@ class Mfactura extends CI_Model{
        return $resultado->row();
     }
      //OBTENER DATOS
-     public function midupdatefact($id){
+     public function midupdatefact($id,$orden){
         $this->db->where('N_factura', $id);
+	$this->db->where('id_orden', $orden);
         $resultado = $this->db->get('factura');
         return $resultado->row();
      }
