@@ -28,7 +28,6 @@
                                   <th width="3%">Orden N°</th>
                                   <th width="7%">Fecha</th>
                                   <th width="15%">Cliente</th>
-                                  <th width="20%">Descripcion</th>
                                   <th width="10%">Operaciones</th>
                               </tr>
                           </thead>
@@ -39,7 +38,6 @@
                                           <td width="3%"><?php echo $atributos->num_orden; ?></td>
                                           <td width="7%"><?php echo date("d/m/Y", strtotime($atributos->fecha)); ?></td>
                                           <td width="15%"><?php echo $atributos->Nombre; ?></td>
-                                          <td width="20%"><?php echo $atributos->descripcion; ?></td>
                                           <td  width="10%">
                                               <div class="btn-group">
                                               <a href="<?php echo base_url(); ?>mantenimiento/cequipos/print/<?php echo $atributos->num_orden; ?>" class="btn btn-warning" title="Ver">

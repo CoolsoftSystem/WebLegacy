@@ -25,39 +25,11 @@
                                     <label class="control-label" for="tipo_cliente">CLIENTE (*)</label>
                                     <?$this->select_items->sin_buscador($tipo_cliente_select, '','tipo_cliente','1', 'required');?>
                                 </div>
-
-                                <div class="col-sm-6 form-group">
-                                    <label for="marca">Marca</label>
-                                    <input type="text" id="txtmarca" name="txtmarca"maxlength="1000" class="form-control" value="<?php echo set_value('txtmarca') ?>"  >
-                                </div>
-                                <div class="col-sm-6 form-group">
-                                    <label for="modelo">Modelo</label>
-                                    <input type="text" id="txtmodelo" name="txtmodelo" maxlength="950"class="form-control" value="<?php echo set_value('txtmodelo') ?>"  >
-                                </div>
-                                <div class="col-sm-6 form-group">
-                                    <label for="serie">Número serie</label>
-                                    <input type="text" id="txtserie" name="txtserie" maxlength="950"class="form-control" value="<?php echo set_value('txtserie') ?>"  >
-                                </div>
-                                <div class="col-sm-6 form-group">
-                                    <label for="sector">Sector</label>
-                                    <input type="text" id="txtsector" name="txtsector" maxlength="950"class="form-control" value="<?php echo set_value('txtsector') ?>"  >
-                                </div>
-                                <div class="col-sm-12 form-group">
-                                    <label for="accesorios">Accesorios</label>
-                                    <input type="text" id="txtaccesorios" name="txtaccesorios" maxlength="950"class="form-control" value="<?php echo set_value('txtaccesorios') ?>"  >
-                                </div>
-                                <div class="col-sm-12 form-group">
-                                    <label for="descripcion">Descripción</label>
-                                    <input type="text" id="txtdescripcion" name="txtdescripcion" maxlength="950"class="form-control" value="<?php echo set_value('txtdescripcion') ?>"  >
-                                </div>
-                                <div class="col-sm-12 form-group">
+                                 <div class="col-sm-12 form-group">
                                     <a class="btn btn-info" href="<?php echo base_url(); ?>mantenimiento/cequipos">Volver</a>
                                     <button type="submit" class="btn btn-success">Guardar</button>
                                 </div>
-
                             </form>
-
-
                         </div>
                     </div>
                 </div>
