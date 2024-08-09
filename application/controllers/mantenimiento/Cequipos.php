@@ -51,7 +51,6 @@ public function addItems(){
     $numSerie = $this->input->post("numSerie");
 	$sector = $this->input->post("sector");
 	$accesorios = $this->input->post("accesorios");
-	$descripcion = $this->input->post("descripcion");
 
 
     
@@ -69,7 +68,6 @@ public function addItems(){
         'numSerie' => $numSerie,
 		'sector' => $sector,
 		'accesorios' => $accesorios,
-		'descripcion' => $descripcion,
         'IdEncabezado' => $idEncabezado
     );
    
@@ -95,8 +93,8 @@ public function cinsert(){
      $modelo = $this->input->post('txtmodelo');
      $num_serie = $this->input->post('txtserie');
      $sector = $this->input->post('txtsector');
-     $acc = $this->input->post('txtaccesorios');
-     $descripcion = $this->input->post('txtdescripcion');*/
+     $acc = $this->input->post('txtaccesorios');*/
+     $observaciones = $this->input->post('txtobservaciones');
 
                $data = array(
 
@@ -108,6 +106,7 @@ public function cinsert(){
                    'descripcion' => $descripcion,
                    'accesorios' => $acc,*/
                    'id_cliente' => $id_cliente,
+				   'observaciones' => $observaciones,
                    'anulado' => '0'
                );
                $res=$this->mequipos->minsertequipos($data);
@@ -146,6 +145,7 @@ public function cupdate(){
     $id = $this->input->post('txtnumorden');
     $fecha = date("Y/m/d", strtotime($this->input->post('txtfecha')));
     $cliente = mb_strtoupper($this->input->post("cliente"));
+	$observaciones = $this->input->post('txtobservaciones');
     /*$marca = $this->input->post('txtmarca');
     $modelo = $this->input->post('txtmodelo');
     $num_serie = $this->input->post('txtserie');
@@ -173,6 +173,7 @@ public function cupdate(){
                 'descripcion' => $descripcion,
                 'accesorios' => $acc,*/
                 'id_cliente' => $cliente,
+				'observaciones' => $observaciones,
                 'anulado' => '0'
                );
 
@@ -187,7 +188,7 @@ public function cupdate(){
 
 }
 
-public function print($id){
+public function cprint($id){
     $idrol = $this->session->userdata("idRol");
     $data = array (
         'equiposindex' => $this->mequipos->midupdateequipos($id),
@@ -242,7 +243,6 @@ public function cupdateItems(){
     $num_serie = $this->input->post('txtserie');
     $sector = $this->input->post('txtsector');
     $acc = $this->input->post('txtaccesorios');
-    $descripcion = $this->input->post('txtdescripcion');
 	$id = $this->input->post('txtid');
 	$item = $this->mequipos->midupdateequipositems($id);
   
@@ -254,7 +254,6 @@ public function cupdateItems(){
                 'modelo' => $modelo,
                 'num_serie' => $num_serie,
                 'sector' => $sector,
-                'descripcion' => $descripcion,
                 'accesorios' => $acc,
 		);
   

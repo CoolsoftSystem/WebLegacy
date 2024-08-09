@@ -63,10 +63,6 @@
                                     <label for="accesorios">Accesorios</label>
                                     <input type="text" id="txtaccesorios" name="txtaccesorios" class="form-control" value="<?php echo set_value('txtaccesorios') ?>" >
                                     </div>
-                                    <div class="col-sm-12 form-group">
-                                    <label for="descripcion">Descripción</label>
-                                    <input type="text" id="txtdescripcion" name="txtdescripcion" class="form-control" value="<?php echo set_value('txtdescripcion') ?>" >
-                                    </div>
                                     <div class="col-sm-1">
                                         <br>
                                         <button class="btn btn-primary" type="button" id="agregarItem"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
@@ -81,7 +77,6 @@
                                                         <th>Numero de Serie</th>
                                                         <th>Sector</th>
                                                         <th>Accesorios</th>
-                                                        <th>Descripción</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id='tbody1'>
@@ -95,7 +90,7 @@
                                                                 <td><?php echo $atributos->numSerie; ?></td>
                                                                 <td><?php echo $atributos->sector; ?></td>
                                                                 <td><?php echo $atributos->accesorios; ?></td>
-                                                                <td><?php echo $atributos->descripcion; ?></td>
+                                                              
                                                                 <?php $data = $atributos->id_equipo; ?>
                                                                 <td>
                                                                     <div class="btn-group">
@@ -128,37 +123,41 @@
 $(document).ready(function(){
 
     var base_url= "<?php echo base_url();?>";
-  $('#agregarProducto').on('click',function(){
-        var idRemito =$('#txtIdRemito').val();
-        var producto =$('#txtproducto').val();
-        var cant =$('#txtcantidad').val();
+  $('#agregarItem').on('click',function(){
+        var idEncabezado =$('#txtIdEquipos').val();
+        var marca =$('#txtmarca').val();
+        var modelo =$('#txtmodelo').val();
         var numSerie =$('#txtnumSerie').val();
+		var sector =$('#txtsector').val();
+		var accesorios =$('#txtaccesorios').val();
     
       
-        if((producto=='') || (cant=='') || (numSerie=='')  ){
+        if((marca=='') || (modelo=='') || (numSerie=='')  ){
             
-            window.location.href=base_url+'/mantenimiento/cremitos/cError/'+idRemito;
+            window.location.href=base_url+'/mantenimiento/cequipos/cError/'+idEncabezado;
         }else{
 
-        $('#txtproducto').val('');
-        $('#txtcantidad').val('');
+        $('#txtmarca').val('');
+        $('#txtmodelo').val('');
         $('#txtnumSerie').val('');
+		$('#txtsector').val('');
+		$('#txtaccesorios').val('');
         
        
                 $.ajax( {
                                     method:'POST',
-                                    url:'<?php echo base_url(); ?>' + 'mantenimiento/cremitos/addProducto',
+                                    url:'<?php echo base_url(); ?>' + 'mantenimiento/cequipos/addItems',
                                     dataType:'html',
-                                    data:{producto:producto,idRemito:idRemito,cant:cant, numSerie:numSerie}})
+                                    data:{marca:marca,idEncabezado:idEncabezado,modelo:modelo, numSerie:numSerie,sector:sector,accesorios:accesorios}})
                                    
                                     .done(function(r) {
                                         //alert(r);
                                     if(r==0){
                                         //alert("entra al if");
-                                        window.location.href=base_url+'/mantenimiento/cremitos/cErrorCantidad/'+idRemito;
+                                        window.location.href=base_url+'/mantenimiento/cequipos/cErrorCantidad/'+idEncabezado;
                                     }else if(r==1) {
                                         //alert("no entra al if");
-                                        window.location.href=base_url+'/mantenimiento/cremitos/cedit/'+idRemito;
+                                        window.location.href=base_url+'/mantenimiento/cequipos/cedit/'+idEncabezado;
                                             //$("#tbody1").append(r['linksa']);
                                     }
                                         

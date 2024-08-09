@@ -71,7 +71,6 @@ class Mequipos extends CI_Model{
 		$numSerie=$data['numSerie'];
 		$sector=$data['sector'];
 		$accesorios=$data['accesorios'];
-		$descripcion=$data['descripcion'];
 	   
 		$this->db->where('IdEncabezado =',"$IdEncabezado");
 		$this->db->insert('recepcionEquiposDetalle',$data);

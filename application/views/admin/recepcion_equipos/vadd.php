@@ -25,6 +25,10 @@
                                     <label class="control-label" for="tipo_cliente">CLIENTE (*)</label>
                                     <?$this->select_items->sin_buscador($tipo_cliente_select, '','tipo_cliente','1', 'required');?>
                                 </div>
+								<div class="col-sm-12 form-group">
+                                    <label for="observaciones">Observaciones</label>
+                                    <input type="text" id="txtobservaciones" name="txtobservaciones" class="form-control" value="<?php echo set_value('txtobservaciones') ?>" >
+                                    </div>
                                  <div class="col-sm-12 form-group">
                                     <a class="btn btn-info" href="<?php echo base_url(); ?>mantenimiento/cequipos">Volver</a>
                                     <button type="submit" class="btn btn-success">Guardar</button>
