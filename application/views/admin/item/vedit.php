@@ -39,13 +39,9 @@
                                     <label for="accesorios">Accesorios</label>
                                     <input type="text" id="txtaccesorios" name="txtaccesorios" maxlength="950"class="form-control" value="<?php echo !empty(form_error('txtaccesorios'))? set_value('txtaccesorios') : $itemsedit->accesorios ?>"  >
                                 </div>
-                                <div class="col-sm-12 form-group">
-                                    <label for="descripcion">Descripción</label>
-                                    <input type="text" id="txtdescripcion" name="txtdescripcion" maxlength="950"class="form-control" value="<?php echo !empty(form_error('txtdescripcion'))? set_value('txtdescripcion') : $itemsedit->descripcion ?>">
-                                </div>
 
                             <div class="col-sm-12 form-group">
-                            <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cequipos/cedit/<?php echo $itemsedit->id_equipo; ?>">Volver</a>
+                            <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cequipos/cedit/<?php echo $itemsedit->id_encabezado; ?>">Volver</a>
                             <button type="submit" class="btn btn-success">Guardar</button>
                             </div>
                         </div>

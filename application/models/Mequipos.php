@@ -4,11 +4,9 @@ class Mequipos extends CI_Model{
 
     //MOSTRAR orden equipos
     public function mselectequipos(){
-        $resultado =	$query = $this->db->query("SELECT r.num_orden , r.fecha ,r1.marca, r1.modelo,
-        r1.num_serie, r1.sector, r1.descripcion, r1.accesorios, r.id_cliente, r.anulado, c.Nombre FROM recepcionEquiposEncabezado r
-        JOIN cliente c ON r.id_cliente = c.IdCliente  
-		JOIN recepcionEquiposDetalle r1 ON r.num_orden = r1.id_encabezado
-        where r.anulado = 0 and r1.anulado = 0
+        $resultado =	$query = $this->db->query("SELECT r.num_orden , r.fecha, c.Nombre FROM recepcionEquiposEncabezado r
+       INNER JOIN cliente c ON r.IdCliente = c.IdCliente  
+        where r.anulado = 0
         ORDER BY r.num_orden DESC;");
      return $resultado->result();
     }
@@ -48,13 +46,13 @@ class Mequipos extends CI_Model{
         return $this->db->update('recepcionEquiposDetalle', $data);
      }
 
-	 //Trear Detalle Orden equipos
+	 /*//Trear Detalle Orden equipos
 	 public function obtenerEquiposDetalle($idEquipo, $idEncabezado){
         $this->db->where('id_equipo =',"$idEquipo");
         $this->db->where('id_encabezado =',"$idEncabezado");
         $resultado =$this->db->get('recepcionEquiposDetalle');
         return $resultado->result();
-    }
+    }*/
 
 	 //Trear Detalle Orden equipos
 	 public function obtenerEquiposDetalle($idEncabezado){
@@ -65,14 +63,14 @@ class Mequipos extends CI_Model{
 
 	public function cargarItems($data){
 
-		$idEncabezado=$data['IdEncabezado'];
+		$id_encabezado=$data['id_encabezado'];
 		$marca=$data['marca'];
 		$modelo=$data['modelo'];
-		$numSerie=$data['numSerie'];
+		$num_serie=$data['num_serie'];
 		$sector=$data['sector'];
 		$accesorios=$data['accesorios'];
 	   
-		$this->db->where('IdEncabezado =',"$IdEncabezado");
+		$this->db->where('id_encabezado =',"$id_encabezado");
 		$this->db->insert('recepcionEquiposDetalle',$data);
 		$resultado=$this->db->insert_id();
 	

@@ -39,12 +39,13 @@
                                     <div class="row" >
                                         <div class="col-md-4 cliente1">
                                             <p>Sr./es: <?php echo $cliente->Nombre; ?></p>
-                                            <p>Domicilio: <?php echo $model->Domicilio." ".$model->Localidad." ".$model->Provincia;  ?></p>                                       
-                                        </div>
-                                        <div class="col-md-8 cliente2">
+                                            <p>Domicilio: <?php echo $model->Domicilio." ".$model->Localidad." ".$model->Provincia;  ?></p>   
 																						<p>Teléfonos: Mantenimiento: <?php if($model->tel_mantenimiento) {echo $model->tel_mantenimiento; }else{ echo "-";}; ?> &nbsp 
 																							 Ventas: <?php if($model->tel_venta) { echo $model->tel_venta;}else{ echo "-";} ;?> &nbsp 
-																							 Comercial: <?php if($model->tel_comercial) {echo $model->tel_comercial;} else{ echo "-";} ; ?></p>  
+																							 Comercial: <?php if($model->tel_comercial) {echo $model->tel_comercial;} else{ echo "-";} ; ?></p>                                     
+                                        </div>
+                                        <div class="col-md-8 cliente2">
+																						 
                                             <p>E-mails: <?php if($model->mail_mant) {echo $model->mail_mant; }else{ echo "";}; ?> &nbsp 
 																							 <?php if($model->mail_vta) { echo $model->mail_vta;}else{ echo "";} ;?> &nbsp 
 																							 <?php if($model->mail_comercial) {echo $model->mail_comercial;} else{ echo "";} ; ?></p>
@@ -73,7 +74,7 @@
                                                         <tr>
                                                             <td id='tbody2'><?php echo $atributos->marca; ?></td>
                                                             <td id='tbody3'><?php echo $atributos->modelo; ?></td>
-                                                            <td id='tbody2'><?php echo $atributos->numSerie; ?></td>
+                                                            <td id='tbody2'><?php echo $atributos->num_serie; ?></td>
 																														<td id='tbody2'><?php echo $atributos->sector; ?></td>
 																														<td id='tbody2'><?php echo $atributos->accesorios; ?></td>
                                                         </tr>
@@ -86,7 +87,7 @@
                                 <div class="col-md-12" id="celdas5">
                                     <div class="row" >
                                         <div class="col-md-12 registrovacio0">    
-                                          <p><?php echo $items->descripcion; ?></p>                                  
+                                          <p><?php echo $equiposindex->observaciones; ?></p>                                  
                                         </div>
                                         <div class="col-md-12 registro01">
                                             <strong><p>Observaciones</p></strong>                                     

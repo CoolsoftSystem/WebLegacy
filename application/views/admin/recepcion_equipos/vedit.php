@@ -23,11 +23,15 @@
                                      <input type="string" id="txtfecha" name="txtfecha" class="form-control" min="2020-01-01" max="2100-12-31" value="<?php echo !empty(form_error('txtfecha'))? set_value('txtfecha') :  date("d/m/Y", strtotime("$equiposedit->fecha"));?>" >
                                 </div>
                                 <div class="col-md-5 form-group">
-                                    <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>
-                							<? $this->select_items->sin_buscador5($cliente_select,(!empty($model->IdCliente))
-                                        ? $model->IdCliente : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
+								<label for="cliente">Cliente&nbsp;&nbsp; (*)</label>
+                							<? $this->select_items->sin_buscador2($cliente_select,(!empty($model->IdCliente))
+                               ? $model->IdCliente : '',	'cliente','1',(!empty($consultar)) ? "disabled ":'required');?>
                 			        <input id="cliente_hidden" name="cliente_hidden" type="hidden" >
                 			    </div>
+								<div class="col-sm-12 form-group">
+                                <label for="observaciones">OBSERVACIONES</label>
+                                <input type="text" id="txtobservaciones" name="txtobservaciones" maxlength="200" value="<?php echo !empty(form_error('txtobservaciones'))? set_value('txtobservaciones') : $equiposedit->observaciones ?>" class= "form-control"  >
+                            </div>
                                 <div class="col-sm-6 form-group">
                                      <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cequipos">Volver</a>
                                     <button type="submit" class="btn btn-success">Guardar</button>
@@ -37,11 +41,11 @@
                <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-11">
-                                <form action="<?php echo base_url();?>mantenimiento/cequipos/cupdateItems" method="POST">
+                                <form action="<?php echo base_url();?>mantenimiento/cequipos/cupdateItem" method="POST">
                                     <div class="col-sm-12 form-group">
                                     <h3>Detalle Equipos</h3>
                                     </div>
-                                    <input type="hidden" value="<?php echo $equiposedit->IdEncabezado ?>" name="txtIdEquipos" id="txtIdEquipos">
+                                    <input type="hidden" value="<?php echo $equiposedit->num_orden ?>" name="txtIdEquipos" id="txtIdEquipos">
                                 
                                     <div class="col-sm-5 form-group">
                                         <label for="marca">Marca</label>
@@ -49,7 +53,7 @@
                                     </div>
                                     <div class="col-sm-3 form-group">
                                         <label for="modelo">Modelo</label>
-                                        <input type="number" id="txtmodelo" name="txtmodelo" class="form-control" value="<?php echo set_value('txtmodelo') ?>" >
+                                        <input type="text" id="txtmodelo" name="txtmodelo" class="form-control" value="<?php echo set_value('txtmodelo') ?>" >
                                     </div>
                                     <div class="col-sm-3 form-group">
                                         <label for="numSerie">Numero de Serie</label>
@@ -80,24 +84,24 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody id='tbody1'>
-                                                    <?php if (!empty($item)) : ?>
-                                                        <?php foreach ($item as $atributos) : ?>
+                                                    <?php if (!empty($items)) : ?>
+                                                        <?php foreach ($items as $atributos) : ?>
                                                             <tr>
                                                                 <td><?php echo $atributos->id_equipo; ?></td>
-                                                                <td style="text-align: justify; display: inline-block;"><?php echo $atributos->item; ?></td>
+                                                               
                                                                 <td><?php echo $atributos->marca; ?></td>
                                                                 <td><?php echo $atributos->modelo; ?></td>
-                                                                <td><?php echo $atributos->numSerie; ?></td>
+                                                                <td><?php echo $atributos->num_serie; ?></td>
                                                                 <td><?php echo $atributos->sector; ?></td>
                                                                 <td><?php echo $atributos->accesorios; ?></td>
                                                               
                                                                 <?php $data = $atributos->id_equipo; ?>
                                                                 <td>
                                                                     <div class="btn-group">
-                                                                        <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cequipos/ceditItem/<?php echo $atributos->id_equipo; ?>" class="btn btn-info ">
+                                                                        <a title="Modificar" href="<?php echo base_url(); ?>mantenimiento/cequipos/ceditItems/<?php echo $atributos->id_equipo; ?>" class="btn btn-info ">
                                                                             <span class="fa fa-pencil"></span>
                                                                         </a>
-                                                                        <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cequipos/cdeleteItem/<?php echo $atributos->id_equipo; ?>" class="btn btn-danger btn-remove deleteItemEquipos">
+                                                                        <a title="Eliminar" href="<?php echo base_url(); ?>mantenimiento/cequipos/cdeleteItems/<?php echo $atributos->id_equipo; ?>" class="btn btn-danger btn-remove deleteItemEquipos">
                                                                             <span class="fa fa-remove"></span>
                                                                         </a>
                                                                     </div>
@@ -132,7 +136,7 @@ $(document).ready(function(){
 		var accesorios =$('#txtaccesorios').val();
     
       
-        if((marca=='') || (modelo=='') || (numSerie=='')  ){
+        if((marca=='') || (modelo=='') || (numSerie=='')){
             
             window.location.href=base_url+'/mantenimiento/cequipos/cError/'+idEncabezado;
         }else{
@@ -148,7 +152,7 @@ $(document).ready(function(){
                                     method:'POST',
                                     url:'<?php echo base_url(); ?>' + 'mantenimiento/cequipos/addItems',
                                     dataType:'html',
-                                    data:{marca:marca,idEncabezado:idEncabezado,modelo:modelo, numSerie:numSerie,sector:sector,accesorios:accesorios}})
+                                    data:{marca:marca,idEncabezado:idEncabezado,modelo:modelo,numSerie:numSerie,sector:sector,accesorios:accesorios}})
                                    
                                     .done(function(r) {
                                         //alert(r);
