@@ -163,7 +163,7 @@ $(document).ready(function () {
 });
 
 
-$(".deleteOrden").on("click", function(e){
+         $(".deleteOrden").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
            //alert(ruta);
@@ -174,7 +174,7 @@ $(".deleteOrden").on("click", function(e){
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
              cancelButtonColor: '#d33',
-             confirmButtonText: "Eliminar",
+             confirmButtonText: "NOOO",
              showLoaderOnConfirm: true,
              cancelButtonText: "Cancelar",
              closeOnConfirm: false,
