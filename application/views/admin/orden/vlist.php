@@ -174,7 +174,7 @@ $(document).ready(function () {
              showCancelButton: true,
              confirmButtonColor: '#d9534f',
              cancelButtonColor: '#d33',
-             confirmButtonText: "NOOO",
+             confirmButtonText: "Eliminar",
              showLoaderOnConfirm: true,
              cancelButtonText: "Cancelar",
              closeOnConfirm: false,
