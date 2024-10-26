@@ -31,7 +31,12 @@
                          </div>
                          <?php endif ; ?>
 
-                         <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
+                         
+                    </div>
+ 
+               <div class="col-md-6">
+                 <div class="row">
+                 <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
                           <div class="col-12">
                               <div class="col-sm-12 form-group">
                                 <h3>Técnicos</h3>
@@ -99,21 +104,15 @@
                                 <label>Completa</label><br>
                                 <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" disabled <?=(!empty($parteordenedit->Completa)&&$parteordenedit->Completa=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($parteordenedit->Completa))?'checked':''?> />
                                 <span class="checkmark"></span>
-                            </div>
-                    
-
+                            </div>                    
                             <div class="col-sm-6 form-group">
                                 <label for="tarea">Tarea</label>
                                 <input type="text" id="txttarea" name="txttarea" maxlength="1000" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
                             </div>
 
-                  </div>
+                      </div>
 
                           </form>
-                    </div>
- 
-               <div class="col-md-6">
-                 <div class="row">
                    <?php if($this->session->flashdata('error')):?>
                     <div class="alert alert-danger">
                         <p><?php echo $this->session->flashdata('error') ?> </p>
