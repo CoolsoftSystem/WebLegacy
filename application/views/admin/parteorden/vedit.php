@@ -31,12 +31,7 @@
                          </div>
                          <?php endif ; ?>
 
-                         
-                    </div>
- 
-               <div class="col-md-6">
-                 <div class="row">
-                 <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
+                         <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
                           <div class="col-12">
                               <div class="col-sm-12 form-group">
                                 <h3>Técnicos</h3>
@@ -83,6 +78,12 @@
                            </form>
                        </div>
                     </div>
+                    
+                          </form>
+                    </div>
+ 
+           <div class="row">
+                  <div class="col-md-6">
                     <div class="row mt-4">
                             <div class=" col-md-3 form-group">
                                 <label for="fechaInicio">FechaInicio</label>
@@ -110,16 +111,15 @@
                                 <input type="text" id="txttarea" name="txttarea" maxlength="1000" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
                             </div>
 
-                      </div>
-
-                          </form>
+                    </div>
+              </div>
                    <?php if($this->session->flashdata('error')):?>
                     <div class="alert alert-danger">
                         <p><?php echo $this->session->flashdata('error') ?> </p>
                     </div>
                     <?php endif ; ?>
                     <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
-                        <div class="col-sm-8 form-group">
+                        <div class="col-sm-6 form-group">
                           <h3>Materiales</h3>
                         </div>
                         <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
@@ -140,7 +140,7 @@
                             <br>
                             <button class="btn btn-success" type="button" id="buscar1"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
                           </div>
-                          <div class="col-sm-12 form-group">
+                          <div class="col-sm-6 form-group">
                                 <table id="example1" class="table table-bordered table-hover order-table">
                                     <thead>
                                         <tr>
@@ -176,7 +176,6 @@
                                 </table>
                           </div>
                     </form>
-                  </div>
                </div>
                </div>
                </div>
