@@ -3249,7 +3249,6 @@ table.text-center th {
 .register-page {
   /*background: rgb(119, 30, 110);*/
   background: #001a35;
-  border-radius: 12px;
 }
 .login-box,
 .register-box {
@@ -3266,6 +3265,7 @@ table.text-center th {
 .login-box-body,
 .register-box-body {
   background-color: #032e5c;
+  border-radius: 12px;
   padding: 20px;
   border-top: 0;
   color: #666;
