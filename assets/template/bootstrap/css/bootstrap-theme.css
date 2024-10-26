@@ -586,7 +586,7 @@ fieldset[disabled] .btn-danger.active {
 }
 /*# sourceMappingURL=bootstrap-theme.css.map */
 .btn-secondary {
-  background-color: #6c757d;
+  background-color: #dd1e61;
   color: #ffffff; 
   border: 1px solid #6c757d; 
   border-radius: 5px;
@@ -597,7 +597,7 @@ fieldset[disabled] .btn-danger.active {
 
 
 .btn-secondary:hover {
-  background-color: #5a6268; 
+  background-color: #600927;
   border-color: #5a6268;
 }
 
