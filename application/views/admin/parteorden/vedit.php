@@ -141,7 +141,7 @@
                             <br>
                             <button class="btn btn-success" type="button" id="buscar1"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
                           </div>
-                          <div class="col-sm-6 form-group">
+                          <div class="col-6 form-group">
                                 <table id="example1" class="table table-bordered table-hover order-table">
                                     <thead>
                                         <tr>
