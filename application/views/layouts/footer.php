@@ -288,10 +288,17 @@ $('.sidebar-menu').tree()
 $(".insertParte").on("click", function(e){
            e.preventDefault(); // cancela accion de href
            var ruta =$(this).attr("href");
+           id=ruta.substring(ruta.lastIndexOf('/') + 1);         
+                  $.ajax({
+                    url: ruta,
+                    type: "POST",
+                    success:function(res){
                       res='mantenimiento/cparteorden/listar/';
                       window.location.href=base_url+res+id;
-                    }               
-         });
+                    }
+                  });
+               
+              });
 //ACCIONES DE PARTE ***************************************************************************************
 
         $(".deleteParte").on("click", function(e){
