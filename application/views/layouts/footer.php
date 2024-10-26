@@ -294,11 +294,9 @@ $(".insertParte").on("click", function(e){
                    $.ajax({
                     url: ruta,
                     type: "POST",
-                    success:function(newTaskId)){
-                      var editUrl = base_url + "mantenimiento/cparteorden/editar" + newTaskId;
-                      window.location.href = editUrl;
-                     /* res='mantenimiento/cparteorden/listar/';
-                      window.location.href=base_url+res+id;*/
+                    success:function(res){
+                      res='mantenimiento/cparteorden/listar/';
+                      window.location.href=base_url+res+id;
                 }
               });
          });
