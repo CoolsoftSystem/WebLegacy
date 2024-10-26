@@ -79,7 +79,7 @@
                        </div>
                     </div>
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="row mt-4">
                             <div class=" col-md-3 form-group">
                                 <label for="fechaInicio">FechaInicio</label>
                                 <input type="string" id="txtfechaInicio" name="txtfechaInicio" value="<?php echo !empty(form_error('txtfechaInicio'))? set_value('txtfechaInicio') : $parteordenedit->FechaInicio ?>" class= "form-control"   >
@@ -101,7 +101,9 @@
                                 <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" disabled <?=(!empty($parteordenedit->Completa)&&$parteordenedit->Completa=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($parteordenedit->Completa))?'checked':''?> />
                                 <span class="checkmark"></span>
                             </div>
-                                <div class="col-sm-4 form-group">
+                    
+
+                            <div class="col-sm-6 form-group">
                                 <label for="tarea">Tarea</label>
                                 <input type="text" id="txttarea" name="txttarea" maxlength="1000" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
                             </div>
