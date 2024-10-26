@@ -40,6 +40,7 @@
                              <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
                                <div class="col-sm-10 form-group" >
                                    <label class="control-label" for="tipo_tecnico">Técnico</label>
+                                   <option value="" disabled selected>Selecciona uno o más técnicos</option>
                                    <?$this->select_items->sin_buscador($tipo_tecnico_select, '','tipo_tecnico','1', 'required');?>
                                </div>
 
