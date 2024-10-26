@@ -22,7 +22,6 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #001f3f !important;
 }
 /* Layout */
 .wrapper {
@@ -3249,7 +3248,7 @@ table.text-center th {
 .login-page,
 .register-page {
   /*background: rgb(119, 30, 110);*/
-  background: rgb(98, 184, 101);
+  background: #001a35;
 }
 .login-box,
 .register-box {
