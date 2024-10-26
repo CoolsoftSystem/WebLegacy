@@ -23,7 +23,7 @@
                         <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                             <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                       <div class="row">
                         <?php if($this->session->flashdata('error')):?>
                          <div class="alert alert-danger">
