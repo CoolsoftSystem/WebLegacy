@@ -38,12 +38,12 @@
                               </div>
                              <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                              <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
-                               <div class="col-sm-8 form-group" >
+                               <div class="col-sm-10 form-group" >
                                    <label class="control-label" for="tipo_tecnico">Técnico</label>
                                    <?$this->select_items->sin_buscador($tipo_tecnico_select, '','tipo_tecnico','1', 'required');?>
                                </div>
 
-                               <div class="col-sm-4">
+                               <div class="col-sm-2">
                                  <br>
                                  <button class="btn btn-success" type="button" id="buscar2"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
                                </div>
