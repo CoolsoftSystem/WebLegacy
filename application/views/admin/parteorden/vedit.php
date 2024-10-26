@@ -100,7 +100,7 @@
                             </div>
                     
 
-                            <div class="col-sm-12 form-group">
+                            <div class="col-sm-6 form-group">
                                 <label for="tarea">Tarea</label>
                                 <input type="text" id="txttarea" name="txttarea" maxlength="1000" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
                             </div>
