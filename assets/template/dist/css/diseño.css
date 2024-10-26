@@ -139,12 +139,12 @@
 }
 
 #img{
-    height: 32px;
-    width: 32px;
+    height: 48px;
+    width: 48px;
 }
 #imgSmall{
-    height: 24px;
-    width: 24px;
+    height: 32px;
+    width: 32px;
 }
 
 #login{

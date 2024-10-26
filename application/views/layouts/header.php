@@ -47,9 +47,9 @@
 
             <a href="#" class="logo" id="menu3">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><img src="<?php echo base_url()?>assets/template/dist/img/ICONO COOLSOFT jpg.png" id="imgSmall" width="24" height="24"></span>
+                <span class="logo-mini"><img src="<?php echo base_url()?>assets/template/dist/img/ICONO COOLSOFT jpg.png" id="imgSmall"></span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"> <img src="<?php echo base_url()?>assets/template/dist/img/ICONO COOLSOFT jpg.png" id="img"  width="32" height="32"></span>
+                <span class="logo-lg"> <img src="<?php echo base_url()?>assets/template/dist/img/ICONO COOLSOFT jpg.png" id="img"></span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" id="menu2">
