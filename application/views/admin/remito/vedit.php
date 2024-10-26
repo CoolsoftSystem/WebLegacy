@@ -22,6 +22,8 @@
                                 <a class="btn btn-secondary" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
+
+                            
                             <div class="col-md-5 form-group">
                               <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>
                 							<? $this->select_items->sin_buscador2($cliente_select,(!empty($model->IdCliente))

@@ -16,6 +16,10 @@
                             <p><?php echo $this->session->flashdata('error') ?> </p>
                         </div>
                         <?php endif ; ?>
+                        <div class="col-sm-12 form-group">
+                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cparteorden/listar/<?php echo $parteordenedit->IdOrden;?>">Volver</a>
+                                <button type="submit" class="btn btn-success">Guardar</button>
+                            </div>
                         <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                             <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
@@ -46,10 +50,7 @@
                                 <input type="text" id="txttarea" name="txttarea" maxlength="1000" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
                             </div>
 
-                            <div class="col-sm-12 form-group">
-                                <a class="btn btn-success" href="<?php echo base_url();?>mantenimiento/cparteorden/listar/<?php echo $parteordenedit->IdOrden;?>">Volver</a>
-                                <button type="submit" class="btn btn-success">Guardar</button>
-                            </div>
+                          
 
                           </form>
                     </div>
