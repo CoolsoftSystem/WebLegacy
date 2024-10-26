@@ -291,36 +291,12 @@ $(".insertParte").on("click", function(e){
            //alert(ruta);
            id=ruta.substring(ruta.lastIndexOf('/') + 1);
          
-           swal({
-             title: "Esta por agregar Nueva Tarea",
-             //text: "Orden Nro° " +ruta.substring(ruta.lastIndexOf('/') + 1),
-             type: "warning",
-             showCancelButton: true,
-             confirmButtonColor: '#d9534f',
-             cancelButtonColor: '#d33',
-             confirmButtonText: "Confirmar",
-             showLoaderOnConfirm: true,
-             cancelButtonText: "Cancelar",
-             closeOnConfirm: false,
-             closeOnCancel: false
-              },
-              function(isConfirm){
-                if (isConfirm) {
-                  $.ajax({
+                   $.ajax({
                     url: ruta,
                     type: "POST",
                     success:function(res){
                       res='mantenimiento/cparteorden/listar/';
                       window.location.href=base_url+res+id;
-                    }
-                  });
-                }else{
-                  swal({
-                      type: 'error',
-                      title: 'Cancelado',
-                      showConfirmButton: false,
-                      timer: 500
-                    });
                 }
               });
          });
