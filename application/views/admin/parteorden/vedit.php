@@ -84,7 +84,7 @@
  
            <div class="row">
                   <div class="col-md-6">
-                    <div class="row mt-4">
+                    <div class="row md-4">
                             <div class=" col-md-3 form-group">
                                 <label for="fechaInicio">FechaInicio</label>
                                 <input type="string" id="txtfechaInicio" name="txtfechaInicio" value="<?php echo !empty(form_error('txtfechaInicio'))? set_value('txtfechaInicio') : $parteordenedit->FechaInicio ?>" class= "form-control"   >
