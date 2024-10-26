@@ -23,39 +23,7 @@
                         <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                             <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
-                            <div class=" col-sm-3 form-group">
-                                <label for="fechaInicio">FechaInicio</label>
-                                <input type="string" id="txtfechaInicio" name="txtfechaInicio" value="<?php echo !empty(form_error('txtfechaInicio'))? set_value('txtfechaInicio') : $parteordenedit->FechaInicio ?>" class= "form-control"   >
-                            </div>
-                            <div class=" col-sm-3 form-group">
-                                <label for="fechaInicio">FechaFin</label>
-                                <input type="string" id="txtfechaFin" name="txtfechaFin" value="<?php echo !empty(form_error('txtfechaFin'))? set_value('txtfechaFin') : $parteordenedit->FechaFin ?>" class= "form-control"   >
-                            </div>
-                            <div class=" col-sm-2 form-group">
-                                <label for="fechaTranscurrido">Tiempo Transcurrido</label>
-                                <input type="string" id="txtTranscurrido" name="txtTranscurrido" value="<?php echo !empty(form_error('txtTranscurrido'))? set_value('txtTranscurrido') : $hora ?>" class= "form-control"   disabled>
-                            </div>
-                            <div class=" col-sm-3 form-group">
-                                <label for="txtgastos">Gastos</label>
-                                <input type="string" id="txtgastos" name="txtgastos" value="<?php echo !empty(form_error('txtgastos'))? set_value('txtgastos') : $Gastos ?>" class= "form-control"   disabled>
-                            </div>
-                            <div class="col-md-1 form-group">
-                                <label>Completa</label><br>
-                                <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" disabled <?=(!empty($parteordenedit->Completa)&&$parteordenedit->Completa=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($parteordenedit->Completa))?'checked':''?> />
-                                <span class="checkmark"></span>
-                            </div>
-
-                            <div class="col-sm-12 form-group">
-                                <label for="tarea">Tarea</label>
-                                <input type="text" id="txttarea" name="txttarea" maxlength="1000" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
-                            </div>
-
-                          
-
-                          </form>
-                    </div>
-                    </div>
-                    <div class="col-md-6">
+                            <div class="col-md-6">
                       <div class="row">
                         <?php if($this->session->flashdata('error')):?>
                          <div class="alert alert-danger">
@@ -108,6 +76,39 @@
                            </form>
                        </div>
                     </div>
+                            <div class=" col-sm-3 form-group">
+                                <label for="fechaInicio">FechaInicio</label>
+                                <input type="string" id="txtfechaInicio" name="txtfechaInicio" value="<?php echo !empty(form_error('txtfechaInicio'))? set_value('txtfechaInicio') : $parteordenedit->FechaInicio ?>" class= "form-control"   >
+                            </div>
+                            <div class=" col-sm-3 form-group">
+                                <label for="fechaInicio">FechaFin</label>
+                                <input type="string" id="txtfechaFin" name="txtfechaFin" value="<?php echo !empty(form_error('txtfechaFin'))? set_value('txtfechaFin') : $parteordenedit->FechaFin ?>" class= "form-control"   >
+                            </div>
+                            <div class=" col-sm-2 form-group">
+                                <label for="fechaTranscurrido">Tiempo Transcurrido</label>
+                                <input type="string" id="txtTranscurrido" name="txtTranscurrido" value="<?php echo !empty(form_error('txtTranscurrido'))? set_value('txtTranscurrido') : $hora ?>" class= "form-control"   disabled>
+                            </div>
+                            <div class=" col-sm-3 form-group">
+                                <label for="txtgastos">Gastos</label>
+                                <input type="string" id="txtgastos" name="txtgastos" value="<?php echo !empty(form_error('txtgastos'))? set_value('txtgastos') : $Gastos ?>" class= "form-control"   disabled>
+                            </div>
+                            <div class="col-md-1 form-group">
+                                <label>Completa</label><br>
+                                <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" disabled <?=(!empty($parteordenedit->Completa)&&$parteordenedit->Completa=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($parteordenedit->Completa))?'checked':''?> />
+                                <span class="checkmark"></span>
+                            </div>
+
+                            <div class="col-sm-12 form-group">
+                                <label for="tarea">Tarea</label>
+                                <input type="text" id="txttarea" name="txttarea" maxlength="1000" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
+                            </div>
+
+                          
+
+                          </form>
+                    </div>
+                    </div>
+ 
                <div class="col-md-6">
                  <div class="row">
                    <?php if($this->session->flashdata('error')):?>
