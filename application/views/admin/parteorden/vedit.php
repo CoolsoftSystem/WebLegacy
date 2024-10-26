@@ -17,7 +17,7 @@
                         </div>
                         <?php endif ; ?>
                         <div class="col-sm-12 form-group">
-                                <a class="btn btn-secondary" href="<?php echo base_url();?>mantenimiento/cparteorden/listar/<?php echo $parteordenedit->IdOrden;?>">Volver</a>
+                                <button class="btn btn-secondary" href="<?php echo base_url();?>mantenimiento/cparteorden/listar/<?php echo $parteordenedit->IdOrden;?>">Volver</button>
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
                         <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
