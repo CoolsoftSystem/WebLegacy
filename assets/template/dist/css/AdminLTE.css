@@ -12,7 +12,6 @@
 html,
 body {
   height: 100%;
-  background-color: #001f3f !important;
 }
 .layout-boxed html,
 .layout-boxed body {
@@ -23,6 +22,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: #001f3f !important;
 }
 /* Layout */
 .wrapper {
