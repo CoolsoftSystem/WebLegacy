@@ -4,6 +4,7 @@
             <a class="btn btn-secondary" href="<?php echo base_url(); ?>mantenimiento/corden">Volver</a>
             <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat insertParte" id="botonVioleta" title="insertParte">
                 <span class="fa-solid fa-plus"></span><span> Agregar Tarea  </span>
+                <button class="btn btn-primary">Agregar Tarea</button>
             </a>                            
                  </div>
     </section>
