@@ -8,6 +8,7 @@
     <section class="content">
         <div class="box box-solid">
             <div class="box-body">
+               <div class="row">
                    <div class="col-md-12">
                    <div class="row">
                        <?php if($this->session->flashdata('error')):?>
@@ -90,7 +91,7 @@
                                 <label for="fechaTranscurrido">Tiempo Transcurrido</label>
                                 <input type="string" id="txtTranscurrido" name="txtTranscurrido" value="<?php echo !empty(form_error('txtTranscurrido'))? set_value('txtTranscurrido') : $hora ?>" class= "form-control"   disabled>
                             </div>
-                            <div class=" col-sm-3 form-group">
+                            <div class=" col-sm- form-group">
                                 <label for="txtgastos">Gastos</label>
                                 <input type="string" id="txtgastos" name="txtgastos" value="<?php echo !empty(form_error('txtgastos'))? set_value('txtgastos') : $Gastos ?>" class= "form-control"   disabled>
                             </div>
@@ -110,6 +111,8 @@
 
                           </form>
                     </div>
+                    </div>
+ 
                <div class="col-md-6">
                  <div class="row">
                    <?php if($this->session->flashdata('error')):?>
