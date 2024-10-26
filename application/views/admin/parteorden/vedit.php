@@ -107,7 +107,7 @@
                                 <input type="text" id="txttarea" name="txttarea" maxlength="1000" value="<?php echo !empty(form_error('txtctarea'))? set_value('txttarea') : $parteordenedit->TareaDesarrollada ?>" class= "form-control" required >
                             </div>
                             <div class="col-md-1 form-group d-flex align-items-center">
-                                <label>Marcar como completa</label><br>
+                                <label>Marcar como completa</label>
                                 <input class="chk_input" type="checkbox" id="habilitado" name="habilitado" data-width="20" data-height="20" disabled <?=(!empty($parteordenedit->Completa)&&$parteordenedit->Completa=="1")?'checked':''?> <?=(!empty($consultar)) ? "disabled" : "";?> <?=(!isset($parteordenedit->Completa))?'checked':''?> />
                                 <span class="checkmark"></span>
                             </div>        
