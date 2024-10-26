@@ -1,12 +1,11 @@
 <div class="content-wrapper">
     <section class="content-header">
-        <div class="col-md-6">
-
+        <div class="col-md-6 d-flex justify-content-between">
+            <a class="btn btn-secondary" href="<?php echo base_url(); ?>mantenimiento/corden">Volver</a>
             <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat insertParte" id="botonVioleta" title="insertParte">
                 <span class="fa-solid fa-plus"></span><span> Agregar Tarea  </span>
             </a>                            
-            <a class="btn btn-secondary" href="<?php echo base_url(); ?>mantenimiento/corden">Volver</a>
-        </div>
+                 </div>
     </section>
     <section class="content" id="cuerpo">
         <div class="box box-solid">
