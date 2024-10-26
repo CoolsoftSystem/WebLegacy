@@ -3248,7 +3248,15 @@ table.text-center th {
 .login-page,
 .register-page {
   /*background: rgb(119, 30, 110);*/
-  background: #001a35;
+ /* background: #001a35;*/
+  background: rgba(23,113,196,1);
+background: -moz-linear-gradient(top, rgba(23,113,196,1) 0%, rgba(23,113,196,1) 4%, rgba(2,24,48,1) 93%, rgba(0,19,39,1) 98%, rgba(0,17,36,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(23,113,196,1)), color-stop(4%, rgba(23,113,196,1)), color-stop(93%, rgba(2,24,48,1)), color-stop(98%, rgba(0,19,39,1)), color-stop(100%, rgba(0,17,36,1)));
+background: -webkit-linear-gradient(top, rgba(23,113,196,1) 0%, rgba(23,113,196,1) 4%, rgba(2,24,48,1) 93%, rgba(0,19,39,1) 98%, rgba(0,17,36,1) 100%);
+background: -o-linear-gradient(top, rgba(23,113,196,1) 0%, rgba(23,113,196,1) 4%, rgba(2,24,48,1) 93%, rgba(0,19,39,1) 98%, rgba(0,17,36,1) 100%);
+background: -ms-linear-gradient(top, rgba(23,113,196,1) 0%, rgba(23,113,196,1) 4%, rgba(2,24,48,1) 93%, rgba(0,19,39,1) 98%, rgba(0,17,36,1) 100%);
+background: linear-gradient(to bottom, rgba(23,113,196,1) 0%, rgba(23,113,196,1) 4%, rgba(2,24,48,1) 93%, rgba(0,19,39,1) 98%, rgba(0,17,36,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1771c4', endColorstr='#001124', GradientType=0 );
 }
 .login-box,
 .register-box {
