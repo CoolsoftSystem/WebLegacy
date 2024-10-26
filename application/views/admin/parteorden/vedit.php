@@ -87,11 +87,11 @@
                     <h3>Tiempo de tarea</h3>
                     <div class="row md-6">
                             <div class=" col-md-6 form-group">
-                                <label for="fechaInicio">FechaInicio</label>
+                                <label for="fechaInicio">Fecha de Inicio</label>
                                 <input type="string" id="txtfechaInicio" name="txtfechaInicio" value="<?php echo !empty(form_error('txtfechaInicio'))? set_value('txtfechaInicio') : $parteordenedit->FechaInicio ?>" class= "form-control"   >
                             </div>
                             <div class=" col-sm-6 form-group">
-                                <label for="fechaInicio">FechaFin</label>
+                                <label for="fechaInicio">Fecha de Finalización</label>
                                 <input type="string" id="txtfechaFin" name="txtfechaFin" value="<?php echo !empty(form_error('txtfechaFin'))? set_value('txtfechaFin') : $parteordenedit->FechaFin ?>" class= "form-control"   >
                             </div>
                             <div class=" col-sm-6 form-group">
