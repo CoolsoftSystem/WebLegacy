@@ -42,7 +42,7 @@
                                    <?$this->select_items->sin_buscador($tipo_tecnico_select, '','tipo_tecnico','1', 'required');?>
                                </div>
 
-                               <div class="col-sm-12">
+                               <div class="col-sm-4">
                                  <br>
                                  <button class="btn btn-success" type="button" id="buscar2"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
                                </div>
