@@ -120,8 +120,7 @@
                     </div>
                     <?php endif ; ?>
                     <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
-                      <div class="container col-sm-6"> 
-                      <div class="col-sm-6 form-group">
+                        <div class="col-sm-4 form-group">
                           <h3>Materiales</h3>
                         </div>
                         <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
@@ -177,8 +176,6 @@
                                     </tbody>
                                 </table>
                           </div>
-                      </div>
-                        
                     </form>
               </div>
                    
