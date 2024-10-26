@@ -113,7 +113,8 @@
 
                     </div>
               </div>
-                   <?php if($this->session->flashdata('error')):?>
+              <div class="col-md-6">
+              <?php if($this->session->flashdata('error')):?>
                     <div class="alert alert-danger">
                         <p><?php echo $this->session->flashdata('error') ?> </p>
                     </div>
@@ -176,6 +177,8 @@
                                 </table>
                           </div>
                     </form>
+              </div>
+                   
                </div>
                </div>
                </div>
