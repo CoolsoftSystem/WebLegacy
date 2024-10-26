@@ -42,7 +42,7 @@
                                    <?$this->select_items->sin_buscador($tipo_tecnico_select, '','tipo_tecnico','1', 'required');?>
                                </div>
 
-                               <div class="col-sm-2">
+                               <div class="col-sm-12">
                                  <br>
                                  <button class="btn btn-success" type="button" id="buscar2"><span class="fa fa-plus" aria-hidden="true" ></span> Agregar </button>
                                </div>
@@ -77,7 +77,7 @@
                        </div>
                     </div>
                     <div class="row mt-4">
-                            <div class=" col-md-6 form-group">
+                            <div class=" col-md-3 form-group">
                                 <label for="fechaInicio">FechaInicio</label>
                                 <input type="string" id="txtfechaInicio" name="txtfechaInicio" value="<?php echo !empty(form_error('txtfechaInicio'))? set_value('txtfechaInicio') : $parteordenedit->FechaInicio ?>" class= "form-control"   >
                             </div>
