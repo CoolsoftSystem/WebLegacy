@@ -43,63 +43,58 @@ public function cadd(){
 }
 
 
-public function cinsert(){
+public function cinsert() {
+    $nombre = $this->input->post('txtnombre');
+    $cuit = $this->input->post('txtcuit');
+    $prov = $this->input->post('txtprovincia');
+    $domicilio = $this->input->post('txtdomicilio');
+    $iva = $this->input->post('txtiva');
+    $localidad = $this->input->post('txtlocalidad');
+    $mant = $this->input->post('txtmant');
+    $venta = $this->input->post('txtventas');
+    $comer = $this->input->post('txtcomercial');
+    $mmant = $this->input->post('txtmmant');
+    $mvta = $this->input->post('txtmvta');
+    $mcial = $this->input->post('txtmcial');
+    $nmant = $this->input->post('txtnmant');
+    $nvta = $this->input->post('txtnvta');
+    $ncial = $this->input->post('txtncial');
+    $cli = $this->mcliente->obtenerclientedni($cuit);
 
-    
-     $nombre = $this->input->post('txtnombre');
-     $cuit = $this->input->post('txtcuit');
-     $prov = $this->input->post('txtprovincia');
-     $domicilio = $this->input->post('txtdomicilio');
-     $iva = $this->input->post('txtiva');
-     $localidad = $this->input->post('txtlocalidad');
-     $mant = $this->input->post('txtmant');
-     $venta = $this->input->post('txtventas');
-     $comer = $this->input->post('txtcomercial');
-     $mmant = $this->input->post('txtmmant');
-     $mvta = $this->input->post('txtmvta');
-     $mcial = $this->input->post('txtmcial');
-     $nmant = $this->input->post('txtnmant');
-     $nvta = $this->input->post('txtnvta');
-     $ncial = $this->input->post('txtncial');
-     $cli = $this->mcliente->obtenerclientedni($cuit);
+    if ($cli == null) {
+        $data = array(
+            'Nombre' => $nombre,
+            'DniCuit' => $cuit,
+            'Provincia' => $prov,
+            'Domicilio' => $domicilio,
+            'IVA' => $iva,
+            'Localidad' => $localidad,
+            'tel_mantenimiento' => $mant,
+            'tel_venta' => $venta,
+            'tel_comercial' => $comer,
+            'mail_mant' => $mmant,
+            'mail_vta' => $mvta,
+            'mail_comercial' => $mcial,
+            'nya_mant' => $nmant,
+            'nya_vta' => $nvta,
+            'nya_cial' => $ncial,
+            'Anulado' => '0'
+        );
 
-     if($cli==null){
-               $data = array(
+        // Inserta la nueva tarea y obtiene el ID
+        $newTaskId = $this->mcliente->minsertcliente($data);
 
-                   'Nombre' => $nombre,
-                   'DniCuit' => $cuit,
-                   'Provincia' => $prov,
-                   'Domicilio' => $domicilio,
-                   'IVA' => $iva,
-                   'Localidad' => $localidad,
-                   'tel_mantenimiento' => $mant,
-                   'tel_venta' => $venta,
-                   'tel_comercial' => $comer,
-                   'mail_mant' => $mmant,
-                   'mail_vta' => $mvta,
-                   'mail_comercial' => $mcial,
-                   'nya_mant' => $nmant,
-                   'nya_vta' => $nvta,
-                   'nya_cial' => $ncial,
-                   'Anulado' => '0'
-               );
-               $res=$this->mcliente->minsertcliente($data);
-
-               if($res){
-                   $this->session->set_flashdata('correcto', 'Se guardo Correctamente');
-                   redirect(base_url().'mantenimiento/ccliente');
-               }else{
-                   $this->session->set_flashdata('error', 'No se Guardo registro');
-                   redirect(base_url().'mantenimiento/ccliente/cadd');
-               }
-     }else{
-       //REGLA DE VALIDACION
-       $this->session->set_flashdata('error', 'Este Dni/Cuit ya esta registrado ');
-       redirect(base_url().'mantenimiento/ccliente/cadd');
-     }
-
-
-
+        if ($newTaskId) {
+            // Devuelve el ID de la nueva tarea para que JavaScript lo maneje
+            echo $newTaskId;
+        } else {
+            // Devuelve un error si la tarea no se pudo insertar
+            echo "error";
+        }
+    } else {
+        // Si ya existe el DNI/CUIT, devuelves un mensaje de error
+        echo "duplicate";
+    }
 }
 
 
