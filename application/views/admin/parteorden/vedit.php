@@ -32,7 +32,7 @@
                          <?php endif ; ?>
 
                          <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
-                          <div class="col-sm-12">
+                          <div class="col-12">
                               <div class="col-sm-12 form-group">
                                 <h3>Técnicos</h3>
                               </div>
