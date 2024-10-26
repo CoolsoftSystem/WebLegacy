@@ -2,7 +2,7 @@
             <div class="pull-right hidden-xs">
                 <b>Versión</b> 1.1.0
             </div>
-            <strong>Copyright &copy; <a id="marcaFooter" >GALTech</a>.</strong> All rights
+            <strong>Copyright &copy; <a id="marcaFooter" >GALTech</a>. </strong> All rights
             reserved.
         </footer>
     </div>
