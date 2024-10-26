@@ -78,6 +78,7 @@
                            </form>
                        </div>
                     </div>
+                  <div class="row">
                     <div class="row mt-4">
                             <div class=" col-md-3 form-group">
                                 <label for="fechaInicio">FechaInicio</label>
@@ -126,7 +127,7 @@
                         </div>
                         <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                         <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
-                          <div class="col-sm-12 form-group">
+                          <div class="col-sm-4 form-group">
                               <label for="material">Descripción</label>
                               <input type="text" id="txtmaterial" name="txtmaterial" class="form-control"  value="<?php echo set_value('txtmaterial') ?>" >
                           </div>
@@ -180,7 +181,7 @@
                     </form>
                   </div>
                </div>
-
+               </div>
                </div>
             </div>
         </div>
