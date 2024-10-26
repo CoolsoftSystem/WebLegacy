@@ -91,7 +91,7 @@
                                 <label for="fechaTranscurrido">Tiempo Transcurrido</label>
                                 <input type="string" id="txtTranscurrido" name="txtTranscurrido" value="<?php echo !empty(form_error('txtTranscurrido'))? set_value('txtTranscurrido') : $hora ?>" class= "form-control"   disabled>
                             </div>
-                            <div class=" col-sm- form-group">
+                            <div class=" col-sm-3 form-group">
                                 <label for="txtgastos">Gastos</label>
                                 <input type="string" id="txtgastos" name="txtgastos" value="<?php echo !empty(form_error('txtgastos'))? set_value('txtgastos') : $Gastos ?>" class= "form-control"   disabled>
                             </div>
