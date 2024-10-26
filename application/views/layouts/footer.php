@@ -297,10 +297,6 @@ $(".insertParte").on("click", function(e){
                     success:function(res){
                       res='mantenimiento/cparteorden/listar/';
                       window.location.href=base_url+res+id;
-
-                      //Añadir un toast de que se "creó la tarea exitosamente".
-                      var toastElement = new bootstrap.Toast(document.getElementById("successToast"));
-                      toastElement.show();
                 }
               });
          });
