@@ -299,6 +299,7 @@ a:focus {
   display: inline-block;
   margin: 8px;
   padding: 8px;
+  width: 32px;
 }
 .main-header .logo .logo-mini {
   display: none;
