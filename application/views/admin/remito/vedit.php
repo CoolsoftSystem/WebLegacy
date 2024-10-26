@@ -18,6 +18,10 @@
                         <?php endif ; ?>
                         <form action="<?php echo base_url();?>mantenimiento/cremitos/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $remitoedit->IdRemito?>" name="txtIdRemito" id="txtIdRemito">
+                                                        <div class="col-sm-6 form-group">
+                                <a class="btn btn-secondary" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
                             <div class="col-md-5 form-group">
                               <label for="cliente">Cliente&nbsp;&nbsp; (*)</label>
                 							<? $this->select_items->sin_buscador2($cliente_select,(!empty($model->IdCliente))
@@ -33,10 +37,6 @@
                                 <input type="text" id="txtobservaciones" name="txtobservaciones" maxlength="200" value="<?php echo !empty(form_error('txtobservaciones'))? set_value('txtobservaciones') : $remitoedit->observaciones ?>" class= "form-control"  >
                             </div>
                         
-                            <div class="col-sm-6 form-group">
-                                <a class="btn btn-info" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
-                                <button type="submit" class="btn btn-success">Guardar</button>
-                            </div>
                         </form>
                     </div>
                     <div class="col-md-12">
