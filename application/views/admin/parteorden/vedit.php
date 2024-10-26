@@ -84,6 +84,7 @@
  
            <div class="row">
                   <div class="col-md-6">
+                    <h3>Tiempo de tarea</h3>
                     <div class="row md-6">
                             <div class=" col-md-6 form-group">
                                 <label for="fechaInicio">FechaInicio</label>
