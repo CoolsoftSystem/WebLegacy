@@ -296,8 +296,9 @@ a:focus {
   overflow: hidden;
 }
 .main-header .logo .logo-lg {
-  display: block;
+  display: inline-block;
   margin: 8px;
+  padding: 8px;
 }
 .main-header .logo .logo-mini {
   display: none;
