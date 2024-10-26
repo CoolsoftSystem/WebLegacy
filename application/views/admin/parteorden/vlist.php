@@ -1,4 +1,12 @@
 <div class="content-wrapper">
+    <section class="content-header">
+        <div class="col-md-6">
+
+            <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat insertParte" id="botonVioleta" title="insertParte">
+                <span class="fa-solid fa-plus"></span><span> Agregar Tarea  </span>
+            </a>                            
+        </div>
+    </section>
     <section class="content" id="cuerpo">
         <div class="box box-solid">
             <div class="box-body">
@@ -90,14 +98,6 @@
                     </div>
                 </div>
             </div>
-    </section>
-    <section class="content-header">
-        <div class="col-md-6">
-
-            <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat insertParte" id="botonVioleta" title="insertParte">
-                <span class="fa-solid fa-plus"></span><span> Agregar Tarea  </span>
-            </a>                            
-        </div>
     </section>
 </div>
 
