@@ -120,12 +120,12 @@
                     </div>
                     <?php endif ; ?>
                     <form action="<?php echo base_url();?>mantenimiento/cparteorden/cupdate" method="POST">
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-4 form-group">
                           <h3>Materiales</h3>
                         </div>
                         <input type="hidden" value="<?php echo $parteordenedit->IdOrden ?>" name="txtidorden" id="txtidorden">
                         <input type="hidden" value="<?php echo $parteordenedit->IdParte ?>" name="txtidParte" id="txtidParte">
-                          <div class="col-sm-4 form-group">
+                          <div class="col-sm-6 form-group">
                               <label for="material">Descripción</label>
                               <input type="text" id="txtmaterial" name="txtmaterial" class="form-control"  value="<?php echo set_value('txtmaterial') ?>" >
                           </div>
