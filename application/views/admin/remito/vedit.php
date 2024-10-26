@@ -18,7 +18,7 @@
                         <?php endif ; ?>
                         <form action="<?php echo base_url();?>mantenimiento/cremitos/cupdate" method="POST">
                             <input type="hidden" value="<?php echo $remitoedit->IdRemito?>" name="txtIdRemito" id="txtIdRemito">
-                                                        <div class="col-sm-6 form-group">
+                             <div class="col-sm-6 form-group justify-content-between">
                                 <a class="btn btn-secondary" href="<?php echo base_url();?>mantenimiento/cremitos">Volver</a>
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
