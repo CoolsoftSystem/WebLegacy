@@ -5,6 +5,7 @@
             <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-flat insertParte" id="botonVioleta" title="insertParte">
                 <span class="fa-solid fa-plus"></span><span> Agregar Tarea  </span>
             </a>                            
+            <a class="btn btn-success" href="<?php echo base_url(); ?>mantenimiento/corden">Volver</a>
         </div>
     </section>
     <section class="content" id="cuerpo">
@@ -38,7 +39,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <a class="btn btn-success" href="<?php echo base_url(); ?>mantenimiento/corden">Volver</a>
+                        
                     </div>
                     <div class="col-md-12">
                         <H3>LISTA DE TAREAS</H3>
