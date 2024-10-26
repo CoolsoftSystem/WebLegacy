@@ -48,7 +48,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <button type="submit" class="btn  btn-block   " id="botonVioleta">Sign In</button>
+                        <button type="submit" class="btn  btn-block   " id="botonVioleta">Iniciar sesión</button>
                     </div>
                     <!-- /.col -->
                 </div>
