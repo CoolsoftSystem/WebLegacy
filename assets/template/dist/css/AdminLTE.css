@@ -4990,3 +4990,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1771c4', end
     white-space: normal !important;
   }
 }
+
+.btn-action{
+  padding:8px;
+}

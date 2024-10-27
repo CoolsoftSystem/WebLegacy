@@ -8,9 +8,11 @@
     <section class="content">
         <div class="box box-solid">
         <div class="col-sm-12 form-group">
+            <div class="btn-action">
               <a class="btn btn-secondary" href="<?php echo base_url();?>mantenimiento/ccliente">Volver</a>
              <button type="submit" class="btn btn-primary">Guardar</button>
-                            </div>
+             </div>
+            </div>
             <div class="box-body">
                <hr>
                <div class="row">
