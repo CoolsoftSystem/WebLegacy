@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <div class="col-md-6 d-flex justify-content-between">
-            <button class="btn btn-secondary" href="<?php echo base_url(); ?>mantenimiento/corden">Volver</button>
+            <a class="btn btn-secondary" href="<?php echo base_url(); ?>mantenimiento/corden">Volver</a>
             <a href="<?php echo base_url(); ?>mantenimiento/cparteorden/cinsert/<?php echo $ordenindex->IdOrden; ?>" class="btn  btn-primary insertParte" id="botonVioleta" title="insertParte">
                 <span class="fa-solid fa-plus"></span><span> Agregar Tarea  </span>
             </a>                            
