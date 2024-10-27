@@ -6,6 +6,11 @@
         </h1>
     </section>
     <section class="content">
+    <div class="col-sm-12 form-group">
+          <a class="btn btn-secondary" href="<?php echo base_url(); ?>mantenimiento/ccliente">Volver</a>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+
         <div class="box box-solid">
             <div class="box-body">
                 <div class="row">
@@ -77,11 +82,7 @@
                                     <label for="nom">Nombre y Apellido</label>
                                     <input type="text" id="txtncial" name="txtncial" maxlength="50"class="form-control" value="<?php echo set_value('txtncial') ?>"  >
                                 </div>
-                                <div class="col-sm-12 form-group">
-                                    <a class="btn btn-info" href="<?php echo base_url(); ?>mantenimiento/ccliente">Volver</a>
-                                    <button type="submit" class="btn btn-success">Guardar</button>
-                                </div>
-
+                           
                             </form>
 
 
