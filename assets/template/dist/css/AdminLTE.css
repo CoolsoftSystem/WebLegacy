@@ -3235,7 +3235,7 @@ table.text-center th {
 /*
  * Page: Login & Register
  * ----------------------
- */
+ */ /*
 .login-logo,
 .register-logo {
   font-size: 35px;
@@ -3250,7 +3250,7 @@ table.text-center th {
 .login-page,
 .register-page {
   /*background: rgb(119, 30, 110);*/
- /* background: #001a35;*/
+ /* background: #001a35;
   background: rgba(23,113,196,1);
 background: -moz-linear-gradient(top, rgba(23,113,196,1) 0%, rgba(23,113,196,1) 4%, rgba(2,24,48,1) 93%, rgba(0,19,39,1) 98%, rgba(0,17,36,1) 100%);
 background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(23,113,196,1)), color-stop(4%, rgba(23,113,196,1)), color-stop(93%, rgba(2,24,48,1)), color-stop(98%, rgba(0,19,39,1)), color-stop(100%, rgba(0,17,36,1)));
@@ -3294,6 +3294,102 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1771c4', end
   margin: 10px 0;
 }
 /*
+/* Estilo general */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+}
+
+/* Logos de login y registro */
+.login-logo,
+.register-logo {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.login-logo a,
+.register-logo a {
+  color: #0a84ff; /* Azul iOS */
+  text-decoration: none;
+}
+
+/* Fondo del login */
+.login-page,
+.register-page {
+  background: linear-gradient(180deg, #0a84ff 0%, #007aff 50%, #001a33 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Caja de login y registro */
+.login-box,
+.register-box {
+  width: 340px;
+  margin: 5% auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 20px; /* Bordes redondeados */
+  overflow: hidden;
+}
+
+/* Contenido de la caja */
+.login-box-body,
+.register-box-body {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-top: 0;
+  color: #333;
+  border-radius: 20px;
+}
+
+.login-box-body .form-control-feedback,
+.register-box-body .form-control-feedback {
+  color: #ccc;
+}
+
+.login-box-msg,
+.register-box-msg {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  padding: 15px 0 10px;
+  color: #333;
+}
+
+/* Campos de formulario */
+input.form-control {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 16px;
+  padding: 12px 0;
+  color: #333;
+}
+
+input.form-control:focus {
+  border-bottom: 1px solid #0a84ff;
+  box-shadow: none;
+}
+
+/* Botones de autenticación social */
+.social-auth-links {
+  margin: 15px 0;
+}
+
+/* Estilo para móviles */
+@media (max-width: 768px) {
+  .login-box,
+  .register-box {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+
+
+
  * Page: 400 and 500 error pages
  * ------------------------------
  */
