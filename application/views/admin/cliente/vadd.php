@@ -6,12 +6,11 @@
         </h1>
     </section>
     <section class="content">
-    <div class="col-sm-12 form-group">
+            <div class="box box-solid">
+        <div class="col-sm-12 form-group">
           <a class="btn btn-secondary" href="<?php echo base_url(); ?>mantenimiento/ccliente">Volver</a>
           <button type="submit" class="btn btn-primary">Guardar</button>
-    </div>
-
-        <div class="box box-solid">
+         </div>
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12">
