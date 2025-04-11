@@ -3,25 +3,35 @@
 class Morden extends CI_Model{
 
     //MOSTRAR orden actvas
-    public function mselectorden(){
+    public function mselectorden()
+		{
 
-        $resultado =	$query = $this->db->query("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
-           o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago FROM orden o
-           INNER JOIN cliente c ON o.IdCliente = c.IdCliente  
-           LEFT JOIN factura f ON f.id_orden = o.IdOrden
-           where o.Eliminada=0 and o.Completada=0 
-           ORDER BY o.IdOrden DESC;");
+        $resultado =	$query = $this->db->query("
+					SELECT 
+						o.IdOrden, c.Nombre ,o.IdCliente, o.FechaRecepcion,
+						o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada, 
+						f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago 
+					FROM orden o
+					INNER JOIN cliente c ON o.IdCliente = c.IdCliente  
+					LEFT JOIN factura f ON f.id_orden = o.IdOrden
+					where o.Eliminada=0 and o.Completada=0 
+					ORDER BY o.IdOrden DESC;");
         return $resultado->result();
 
     }
 
     public function mselectestadostrabajo(){
 
-      $resultado =	$query = $this->db->query("SELECT o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion ,
-         o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada, f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago FROM orden o
-         INNER JOIN cliente c ON o.IdCliente = c.IdCliente  
-         LEFT JOIN factura f ON f.id_orden = o.IdOrden
-         where o.Eliminada=0 ORDER BY o.IdOrden DESC;");
+      $resultado =	$query = $this->db->query("
+			SELECT 
+				o.IdOrden , c.Nombre ,o.IdCliente, o.FechaRecepcion,
+				o.TareaDesarrollar, o.Precio, o.Completada, o.Eliminada, 
+				f.N_factura, f.fecha_factura, f.fecha_pago, f.estado_pago 
+			FROM orden o
+			INNER JOIN cliente c ON o.IdCliente = c.IdCliente  
+			LEFT JOIN factura f ON f.id_orden = o.IdOrden
+			where o.Eliminada=0 
+			ORDER BY o.IdOrden DESC;");
       return $resultado->result();
 
   }
@@ -51,28 +61,16 @@ class Morden extends CI_Model{
 
      //CONSULTA LOS GASTOS DE TODOS OS MATERIALES DE UNA TAREA
      public function consultaGatosTotales($id){
-       $resultado =$query = $this->db->query("SELECT SUM(Precio)as Gastos FROM material where IdParte=$id");
-        //log_message('error',sprintf("id orden $ $resultado"));
-        $resultado=$resultado->row();
-       $gastos=$resultado->Gastos;
-
-       $x=intval($gastos);
-       //var_dump($gastos->Gastos);
-       //log_message('error',sprintf("gastosssss $x "));
-         return  $gastos;
+       	$resultado = $this->db->query("SELECT SUM(Precio)as Gastos FROM material where IdParte=$id");
+				$resultado=$resultado->row();
+				return  $resultado->Gastos;
       }
 
 
       public function consultaGatosOrden($id){
-        $resultado =$query = $this->db->query("SELECT ifnull(SUM(Precio),0) as Gastos FROM material where IdOrden=$id");
-         //log_message('error',sprintf("id orden $ $resultado"));
-         $resultado=$resultado->row();
-        $gastos=$resultado->Gastos;
-
-        $x=intval($gastos);
-        //var_dump($gastos->Gastos);
-        //log_message('error',sprintf("gastos de orden $x "));
-          return  $gastos;
+        $resultado = $this->db->query("SELECT ifnull(SUM(Precio),0) as Gastos FROM material where IdOrden=$id");
+				$resultado=$resultado->row();
+				return $resultado->Gastos;
        }
     //MOSTRAR orden completas
     public function mselectordencompletas(){

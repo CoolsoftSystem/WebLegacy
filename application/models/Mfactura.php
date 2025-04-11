@@ -15,15 +15,18 @@ class Mfactura extends CI_Model{
     }
 
     //Modificar
-    public function miupdatefactura($id){
+    public function miupdatefactura($id)
+	{
        $this->db->where('id_orden', $id);
        $resultado = $this->db->get('factura');
        return $resultado->row();
     }
+
      //OBTENER DATOS
-     public function midupdatefact($id,$orden){
+     public function midupdatefact($id,$orden)
+	 {
         $this->db->where('N_factura', $id);
-	$this->db->where('id_orden', $orden);
+		$this->db->where('id_orden', $orden);
         $resultado = $this->db->get('factura');
         return $resultado->row();
      }

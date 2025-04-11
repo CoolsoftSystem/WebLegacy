@@ -16,12 +16,14 @@ class Mparteorden extends CI_Model{
     }
 
     //INSERTAR TecnicoOrden
-    public function insertTecnicoOrden($data){
+    public function insertTecnicoOrden($data)
+	{
       return $this->db->insert('tecnicoorden',$data);
     }
 
     //OBTENER DATOS
-    public function midupdateparteorden($id){
+    public function midupdateparteorden($id)
+	{
        $this->db->where('IdParte', $id);
        $resultado = $this->db->get('parteorden');
        return $resultado->row();
@@ -35,35 +37,40 @@ class Mparteorden extends CI_Model{
 
 
     //MODIFICAR parteorden
-    public function mupdateparteorden($idparte, $idorden,$data){
+    public function mupdateparteorden($idparte, $idorden,$data)
+	{
         $this->db->where('IdParte', $idparte);
         $this->db->where('IdOrden', $idorden);
         return $this->db->update('parteorden', $data);
-     }
+	}
 
-     public function mselectinfoparteorden($id){
+     public function mselectinfoparteorden($id)
+	 {
 
         $resultado =	$query = $this->db->query("SELECT o.IdOrden , o.FechaRecepcion , o.TareaDesarrollar , o.Precio , o.IdCliente , o.Completada , o.Eliminada , c.Nombre
         FROM orden o
         INNER JOIN cliente c ON o.IdCliente = c.IdCliente where o.IdOrden=$id;");
         return $resultado->row();
     }
-    public function tecnico_listar_select(){//
-      $query=$this->db->query("SELECT DISTINCT tecnico.Dni  ID ,tecnico.Nombre as NOMBRE
+
+    public function tecnico_listar_select()
+	{//
+      	$query=$this->db->query("SELECT DISTINCT tecnico.Dni  ID ,tecnico.Nombre as NOMBRE
                               FROM tecnico WHERE tecnico.Activo = 1
                               ORDER BY tecnico.Nombre ASC " );
-    return $query->result();
+    	return $query->result();
     }
 
     public function tecnico_listar_select2(){//
-      $query=$this->db->query("SELECT DISTINCT tecnico.Dni IdTecnico ,tecnico.Nombre as NOMBRE
+      	$query=$this->db->query("SELECT DISTINCT tecnico.Dni IdTecnico ,tecnico.Nombre as NOMBRE
                               FROM tecnico WHERE tecnico.Activo = 1
                               ORDER BY tecnico.Nombre ASC " );
-    return $query->result();
+    	return $query->result();
     }
 
     //Trear Materiales Parte Orden
-    public function obtenerMaterial($idOrden, $idParte){
+    public function obtenerMaterial($idOrden, $idParte)
+	{
         $this->db->where('IdOrden =',"$idOrden");
         $this->db->where('IdParte =',"$idParte");
         $resultado =$this->db->get('material');
@@ -91,12 +98,13 @@ class Mparteorden extends CI_Model{
     //MOSTRAR parteorden
     public function mselectTecnicoIdParte($id){
 
-        $resultado =	$query = $this->db->query("SELECT t.IdParte , t.Dni , tc.Nombre FROM tecnicoorden t
+        $resultado = $this->db->query("SELECT t.IdParte , t.Dni , tc.Nombre FROM tecnicoorden t
            INNER JOIN tecnico tc ON t.Dni = tc.Dni where t.IdParte=$id ;");
         return $resultado->result();
     }
 
-    public function mselectTecnicoId($id){
+    public function mselectTecnicoId($id)
+	{
 
         $resultado =	$query = $this->db->query("SELECT tc.Nombre FROM tecnicoorden t
            INNER JOIN tecnico tc ON t.Dni = tc.Dni where tc.Activo=1 and t.IdParte=$id  ;");
@@ -217,13 +225,10 @@ class Mparteorden extends CI_Model{
      
         }
     //funciones de horas// Separamos el tiempo en un array para pasarlo a segundos
-    public function explode_tiempo($tiempo) {
-        //date("Y-m-d",strtotime($tiempo));
-        //var_dump("entro al explode");
-        //var_dump($tiempo);
+    public function explode_tiempo($tiempo) 
+	{
         $arr_tiempo = explode(':', $tiempo);
-    
-       
+
         $segundos = $arr_tiempo[0] * 3600 + $arr_tiempo[1] * 60 + $arr_tiempo[2];
         return $segundos;
     }
@@ -237,28 +242,6 @@ class Mparteorden extends CI_Model{
 
         return sprintf('%02d:%02d:%02d', $horas, $minutos, $segundos);
     }
-
-
-    /*//INSERTAR TecnicoParteOrden
-    public function cargarTecnicoParteOrden($data){
-      return $this->db->insert('tecnicoparteorden',$data);
-    }
-    //Eliminar Tecnico tala tecnicoparteorden
-    public function mdeletetecnicoParteOrden($Dni){
-        $this->db->where('Dni =',"$Dni");
-        $resultado =$this->db->delete('tecnicoparteorden ');
-
-    }
-
-    //Trae Tecnico asociado a ORDEN al momento de crear momentaneamente
-    public function tecnico_parte(){
-        $resultado =$this->db->get('tecnicoparteorden');
-        return $resultado->result();
-    }*/
-
-
-
-
 
 }
 ?>
